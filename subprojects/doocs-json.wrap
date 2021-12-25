@@ -1,0 +1,4 @@
+[wrap-git]
+directory = doocs-json
+url = ssh://git@git.jetbrains.space/mipt-npm/controls/doocs-json.git
+revision = master

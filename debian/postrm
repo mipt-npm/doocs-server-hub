@@ -1,0 +1,20 @@
+#!/bin/sh
+# post remove script for the Debian GNU/Linux doocs-clean-template-server package
+# automatically created by make-doocspkg
+
+#DEBHELPER#
+
+set -e
+
+if [ "purge" = "$1" -o "remove" = "$1" ] ; then
+	# check if this server is already in the watchdog
+	INWD=`grep "/server/clean_template_server/" /export/doocs/server/watchdog_server/watchdog_server.conf || true`
+	if [ -n "${INWD}" ] ; then
+		/export/doocs/server/doocs delete clean_template_server || true
+	fi
+	/export/doocs/server/doocs stop clean_template_server || true
+fi
+
+if [ "purge" = "$1" ] ; then
+	rm -rf /export/doocs/server/clean_template_server
+fi

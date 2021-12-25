@@ -1,0 +1,51 @@
+# template conf file created by make-doocspkg
+
+eq_conf:
+
+oper_uid: 	-1
+oper_gid: 	405
+ring_buffer: 	50000
+memory_buffer: 	500
+
+eq_fct_name: 	"NODENAME._SVR"
+eq_fct_type: 	1
+{
+SVR.NAME:  	"NODENAME._SVR"
+STS.ERROR:  	0
+STS.NEWERROR:  	0
+STS.ERRORMASK:  	0
+STS.ONLINE:  	1
+ERROR.STR:  	0 0 0 1079536720 "OK"
+STS:  	0x8
+SYS_MASK:  	0
+Z_POS:  	0
+LAST_UPDATE:  	1091026544  233  0  0
+UPDATE_THREAD:  	1524046
+DEVICE.INFO:  	0 0 0 0 "Device OK"
+DEVICE.ONLINE:  	98
+DEVICE.OFFLINE:  	0
+SVR.RPC_CALL_TIME.COMMENT:  	"RPC-Call-Time"
+SVR.RPC_CALL_TIME.EGU:  	1 1 100000 0 "Counts"
+SVR.RPC_CALL_TIME.XEGU:  	0 0 20 0 "ms"
+SVR.UPDATE_TIME.COMMENT:  	"update time"
+SVR.UPDATE_TIME.EGU:  	1 1 1e+06 0 "counts"
+SVR.UPDATE_TIME.XEGU:  	0 0 100 0 "ms"
+SVR.UPDATE:  	1091026544
+SVR.RATE:  	10  0  0  0
+SVR.RPC_NUMBER:	610498008
+SVR.FILE:  	"hub_server.conf"
+SVR.PROGRAMMER:  	"Vasily Kuporosov"
+SVR.ERRORLOG:  	"/export/doocs/server/hub_server/hub_server.log"
+SVR.HOST_NAME:  	"nodename"
+SVR.MUST_RUN:  	0
+SVR.STOP_SVR:  	0
+SVR.START_CMD:  	""
+SVR.DOOCSDEBUG:  	0
+SVR.ARCFLUSH:  	0
+SVR.ERROR_COUNT:  	0
+SVR.TINEDEBUG:  	0
+SVR.TINERUN:  	0
+SVR.FACILITY:  	""
+SVR.DEVICE:  	""
+SVR.ERRORINFO:  	0
+}

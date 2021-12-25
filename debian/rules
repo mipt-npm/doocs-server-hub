@@ -1,0 +1,43 @@
+#!/usr/bin/make -f
+#
+# Debian GNU/Linux package makefile
+# automatically created by make-doocspkg
+#
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+PKG_NAME=doocs-clean-template-server
+BINARY_NAME=clean_template_server
+
+%:
+	dh $@
+
+# Solution if the build target 'distclean' is missing: Use the normal clean
+# target. To activate this workaround uncomment following two lines.
+# override_dh_auto_clean:
+#	 ${MAKE} clean
+
+# If the build target 'test' is missing uncomment the next two lines (but
+# keep the second line as indented comment):
+# override_dh_auto_test:
+#	# Tests are optional :-(
+
+# This is used to configure the Meson build in the DOOCS way. It will be ignored with a Makefile.
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		--buildtype=debugoptimized \
+		--prefix=/export/doocs \
+		--bindir=server/$(BINARY_NAME) \
+		--datadir=server/$(BINARY_NAME)
+
+override_dh_fixperms:
+	dh_fixperms
+	chown -R doocsadm.doocsadm debian/$(PKG_NAME)/export/doocs
+
+override_dh_install:
+	dh_install
+	mv debian/$(PKG_NAME)/export/doocs/server/$(BINARY_NAME)/$(BINARY_NAME) \
+		debian/$(PKG_NAME)/export/doocs/server/$(BINARY_NAME)/$(BINARY_NAME).dist
+
+override_dh_strip:
+	@echo "Not running dh_strip to retain debug symbols in executable"
