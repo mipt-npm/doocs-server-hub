@@ -9,7 +9,7 @@
 class EqDevice : public EqFct {
 public:
 
-  explicit EqDevice(const std::vector<PropertyDescriptor>& props, std::shared_ptr<ZmqConnection> connection, int code_);
+  explicit EqDevice(const std::vector<PropertyDescriptor>& props, const std::shared_ptr<ZmqConnection>& connection, int code_);
 
   int fct_code() override { return code_; }
   void update() override;

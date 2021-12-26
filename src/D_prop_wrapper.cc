@@ -10,7 +10,6 @@ D_prop_wrapper::D_prop_wrapper(EqFct* ef, const PropertyDescriptor& descriptor, 
   , connection_(std::move(connection)) {
   ef->add_property(this);
   data_.set_type(descriptor.type);
-  data_.set(42); // TODO remove this set
 }
 
 D_prop_wrapper::~D_prop_wrapper() {

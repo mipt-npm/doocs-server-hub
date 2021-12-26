@@ -2,7 +2,7 @@
 
 #include "EqDevice.h"
 
-EqDevice::EqDevice(const std::vector<PropertyDescriptor>& props, std::shared_ptr<ZmqConnection> connection, int code)
+EqDevice::EqDevice(const std::vector<PropertyDescriptor>& props, const std::shared_ptr<ZmqConnection>& connection, int code)
     : EqFct("NAME location name")
     , code_(code) {
   props_.reserve(props.size());
